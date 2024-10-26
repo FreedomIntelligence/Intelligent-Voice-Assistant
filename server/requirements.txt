@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+aiohttp
+pydantic
+silero-vad
+torchaudio
+edge_tts
+torch
+ormsgpack
+aiofiles
+soundfile
+librosa
+pydub
+transformers
+openai
