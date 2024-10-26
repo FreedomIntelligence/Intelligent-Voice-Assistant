@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px; /* 增加内边距 */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* 标题下方增加间距 */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* 水平排列左右面板 */
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px; /* 容器下方增加间距 */
+}
+
+.left-panel, .right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.left-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+.right-panel {
+    flex: 1;
+    max-width: 400px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #0056b3;
+}
+
+#transcriptBox {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* 保留换行 */
+}
+
+/* 新增音频展示容器 */
+.audio-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    gap: 20px;
+}
+
+.recordingsBox, .backendRecordingsBox {
+    flex: 1;
+    height: 300px; /* 初始高度设为 300px */
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* 为播放按钮定位提供基础 */
+}
+
+.recordingsBox {
+    /* 左侧录音展示框 */
+}
+
+.backendRecordingsBox {
+    /* 右侧后端音频展示框 */
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div.audio-item {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* 播放按钮样式 */
+.play-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 响应式调整 */
+@media (max-width: 850px) {
+    .container, .audio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-panel, .backendRecordingsBox, .recordingsBox {
+        max-width: 100%;
+    }
+}
