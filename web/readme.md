@@ -24,5 +24,5 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 生成证书后，使用以下命令通过HTTPS协议运行项目：  
 
 ```bash
-uvicorn main:app --host 172.24.168.23 --port 8088 --reload --ssl-keyfile=./key.pem --ssl-certfile=./cert.pem
+uvicorn main:app --host 1XX.XXX.XXX.XXX --port 8088 --reload --ssl-keyfile=./key.pem --ssl-certfile=./cert.pem
 ```
