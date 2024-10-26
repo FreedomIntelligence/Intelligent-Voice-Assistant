@@ -30,7 +30,7 @@ pip install 'uvicorn[standard]'
 
 #### 4.1 更改ASR，LLM，TTS。（默认ASR：SenseVoice，LLM：符合OpenAI的输出格式即可，TTS：FishSpeech）  
 ```bash
-ASR：直接更改Sense_asr下的url,如果想添加其他的asr,只要有满足base_asr下的要求即可  
+- ASR：直接更改Sense_asr下的url,如果想添加其他的asr,只要有满足base_asr下的要求即可  
 
 LLM：直接更改deepspeek_llm下的url以及model名称，如果不是OpenAI的输出格式，需要添加额外的LLM，可根据base_llm下的要求添加即可，eg:qwen_llm  
 
