@@ -29,7 +29,7 @@ pip install 'uvicorn[standard]'
 ### 4. 指定GPU运行（可选）
 
 ```bash
-CUDA_VISIBLE_DEVICES=1 python python.py
+CUDA_VISIBLE_DEVICES=1 XXXXXX
 ```
 
 ### 5. 以HTTPS协议部署服务器
@@ -43,5 +43,5 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 #### 运行项目
 
 ```bash
-uvicorn server:app --host 172.24.168.23 --port 8000 --ssl-keyfile=/mnt/pfs-guan-ssai/nlu/zhaojiale/3oa-text-voice-data-generate/gpto/fastapi_project/key.pem --ssl-certfile=/mnt/pfs-guan-ssai/nlu/zhaojiale/3oa-text-voice-data-generate/gpto/fastapi_project/cert.pem
+uvicorn server:app --host 1XX.XXX.XXX.XXX --port 8000 --ssl-keyfile=XXX/key.pem --ssl-certfile=XXX/cert.pem
 ```
