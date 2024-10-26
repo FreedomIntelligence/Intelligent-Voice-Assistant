@@ -36,8 +36,9 @@ LLM：直接更改deepspeek_llm下的url以及model名称，如果不是OpenAI�
 
 TTS: 更改fish_speech_tts下的URL外，还需要更改refereence_audio和reference_text(这里的语音需要满足音频的评率是44100，如果是48000或者其他，只需要在Fish运行api脚本文件中的，sample_rate更改你想要的即可)。同理，想要添加其他的TTS，只需满足base_tts下的要求即可。
 ```  
-```bash
+
 #### 4.2 更改模块间参数
+```bash
 
 ```
 ### 4. 指定GPU运行（可选）
