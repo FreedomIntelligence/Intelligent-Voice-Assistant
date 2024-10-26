@@ -14,7 +14,7 @@ let isBlocked = false;
 
 // 初始化 WebSocket
 function initializeWebSocket() {
-    const wsUrl = 'wss://10.27.127.33:8000/ws';
+    const wsUrl = 'wss://1XXX.XXX.XXX.XX:8000/ws';   //填写运行server的地址
     socket = new WebSocket(wsUrl);
 
     socket.binaryType = 'arraybuffer';
