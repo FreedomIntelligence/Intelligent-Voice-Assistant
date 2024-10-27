@@ -79,8 +79,6 @@ class TextProcessingModule:
                     if self.ban_pattern:
                         original_merged_text = merged_text
                         merged_text = self.ban_pattern.sub('', merged_text)
-                        # if original_merged_text != merged_text:
-                            # logging.info(f'文本中发现禁止词汇，已替换: 原文="{original_merged_text}"，处理后="{merged_text}"')
 
                     # 根据当前状态选择终止字符
                     termination_chars = self.initial_termination_chars if self.use_initial_chars else self.subsequent_termination_chars
