@@ -12,7 +12,10 @@ FishSpeech地址：https://github.com/fishaudio/fish-speech
 
 然后，根据server下的readme进行操作，同理web端，按照web端下的readme操作即可。  
 
-### 流程如图所示  
+### 流程如图所示   
 
-![流程图](https://github.com/FreedomIntelligence/Intelligent-Voice-Assistant/blob/main/img/%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+![流程图](https://github.com/FreedomIntelligence/Intelligent-Voice-Assistant/blob/main/img/%E6%B5%81%E7%A8%8B%E5%9B%BE.png)  
+
+上述的图片表述的是从前端接受到语音的一段音频经过流程处理成语音再上传前端的过程，实
+
 
