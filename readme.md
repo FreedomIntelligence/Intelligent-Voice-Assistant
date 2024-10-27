@@ -20,6 +20,8 @@ FishSpeech地址：https://github.com/fishaudio/fish-speech
 
 上述的图片表述的是从前端接受到语音的一段音频经过流程处理成语音再上传前端的过程。主要包括5各模块的处理来实现的，下面介绍一下各个模块的基本功能：  
 
+- audio_detection模块
+
 
 
 实现的逻辑是通过定义各个队列进行传输实现的。  
