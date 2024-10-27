@@ -172,9 +172,3 @@ async def websocket_endpoint(websocket: WebSocket):
         print(f"WebSocket error: {e}")
     finally:
         await pipeline.shutdown()
-
-
-
-## export PYTHONPATH='/home/sunzhu/Real-time-hyperpersonification/GPTo_V4/server/modules'
-## CUDA_VISIBLE_DEVICES= uvicorn server:app --host 10.27.127.33 --port 8000
-## uvicorn server:app --host 10.27.127.33 --port 8000 --ssl-keyfile=/home/sunzhu/Real-time-hyperpersonification/GPTo_V4/web/key.pem --ssl-certfile=/home/sunzhu/Real-time-hyperpersonification/GPTo_V4/web/cert.pem
