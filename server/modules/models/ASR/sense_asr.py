@@ -22,7 +22,7 @@ class SenseASR(BaseASR):
         """
         发送音频到Sense ASR API并返回转录文本。
         """
-        url = 'http://10.27.127.33:5002/api/v1/asr'
+        url = 'XXX/api/v1/asr'
         try:
             form = aiohttp.FormData()
             form.add_field('files', combined_audio, filename='audio.wav', content_type='audio/wav')
