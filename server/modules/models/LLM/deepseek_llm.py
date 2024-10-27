@@ -16,10 +16,8 @@ logging.basicConfig(
 class DeepSeekLLM(BaseLLM):
     def __init__(self):
         self.session = aiohttp.ClientSession()
-        # self.api_key = "sk-7fb7d3391417421585daeaa2ff75b8ce"
-        # self.base_url = "https://api.deepseek.com/v1"
         self.api_key = ""
-        self.base_url = "http://61.241.103.33:21000/v1"
+        self.base_url = "XXXX"
 
     async def post_text(self, text: str, text_queue: asyncio.Queue, history_queue: asyncio.Queue, max_history: int = 0):
         """
