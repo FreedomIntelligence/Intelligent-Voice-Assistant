@@ -132,7 +132,6 @@ class DataTransmissionModule:
         """
         async with self.websocket_lock:
             self.websocket = websocket
-            # logging.info("WebSocket 已更新。")
 
         # 取消旧的发送任务
         if self.audio_task and not self.audio_task.done():
