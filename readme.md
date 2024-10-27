@@ -5,6 +5,9 @@ ASR以及TTS都是开源的。部署在A40机器上的延迟在1s左右，如何
 ### 前提条件  
 
 首先，要部署成功SenseVoice和和FishSpeech  
+
+SenseVoice地址：https://github.com/FunAudioLLM/SenseVoice  
+
 然后，根据server下的readme进行操作，同理web端，按照web端部署即可。
 
 
