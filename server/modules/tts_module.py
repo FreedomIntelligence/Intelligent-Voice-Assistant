@@ -46,7 +46,7 @@ class TTSModule:
                 text = await self.tts_queue.get()
                 logging.info("tts_module 成功拿到一条文本")
 
-                file_name = "/home/sunzhu/Real-time-hyperpersonification/GPTo_V4/server/modules/models/TTS/generate.wav"
+                file_name = "/xxxx/generate.wav" ## 保存TTS合成后的语音片段
 
                 try:
                     if streaming:
@@ -85,8 +85,7 @@ class TTSModule:
         try:
             async for data in self.tts_engine.stream(text):
                 self.cache.extend(data)
-                # async with aiofiles.open(file_path, "ab") as file:
-                #     await file.write(data)  # 异步写入
+
         except asyncio.CancelledError:
             logging.info("process_audio 被取消")
             raise
