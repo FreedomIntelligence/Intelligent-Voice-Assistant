@@ -18,9 +18,17 @@ FishSpeech地址：https://github.com/fishaudio/fish-speech
 
 ### 模块介绍
 
-上述的图片表述的是从前端接受到语音的一段音频经过流程处理成语音再上传前端的过程。主要包括5各模块的处理来实现的，下面介绍一下各个模块的基本功能：  
+上述的图片表述的是从前端接受到语音的一段音频经过流程处理成语音再上传前端的过程。主要包括5个模块的处理来实现的，下面介绍一下各个模块的基本功能：  
 
-- audio_detection模块
+- audio_detection模块：该模块主要进行语音检测的功能，以及VAD检测的部分。
+
+- audio_procession模块：该模块主要将audio_detection_queue队列中的数据进行处理，其中包括发送给ASR进行处理，处理的结果放在send_text_queue队列发给前端和LLM模型进行处理，LLM处理的结果传给text_queue队列。
+
+- text_procession模块：该模块主要进行对文本进行分割处理，处理的结果分别放在tts_queue和send_text_queue队列。
+
+- tts_model模块：该模块主要将分割后的文本发送给TTS进行处理，TTS处理后的结果直接放在send_audio_queue队列。
+
+- 
 
 
 
