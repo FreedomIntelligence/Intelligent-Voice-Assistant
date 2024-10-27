@@ -37,7 +37,7 @@ class AudioDetectionModule:
                  target_sample_rate=16000, 
                  buffer_duration=1.0,
                  silence_duration=3.0,
-                 history_maxlen=1):  # 新增参数，默认存储1个前置音频块
+                 history_maxlen=1):  # 默认存储1个前置音频块
         """
         初始化语音检测模块。
         """
@@ -190,10 +190,6 @@ class AudioDetectionModule:
             self.buffer = torch.cat((self.buffer, audio_tensor))
             logging.info(f"追加到缓冲区，当前缓冲区长度: {len(self.buffer)}")
 
-            # 在这里不再更新历史缓冲区
-            # self.history_buffers.append(audio_tensor.clone())
-            # logging.debug(f"更新历史缓冲区，目前存储 {len(self.history_buffers)} 个前置音频块。")
-
             # 当缓冲区足够大时，进行 VAD
             if len(self.buffer) >= self.buffer_size:
                 logging.info("缓冲区大小达到阈值，开始进行语音活动检测。")
@@ -265,7 +261,7 @@ class AudioDetectionModule:
                         logging.info("检测到完整语音片段，已放入 history_audio_queue。")
 
                         # 异步保存音频文件
-                        save_dir = "/home/sunzhu/Real-time-hyperpersonification/GPTo_V4/speaker_wav"
+                        save_dir = "XXX/speaker_wav"
                         await self.save_audio_async(audio_bytes, save_dir)
 
                         # 直接在 run 方法中处理 AFTER_SPEECH，阻塞 run 函数
