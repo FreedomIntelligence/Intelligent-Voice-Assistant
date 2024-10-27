@@ -39,7 +39,7 @@ class ServeTTSRequest(BaseModel):
 class FishSpeechTTS(BaseTTS):
     def __init__(
         self,
-        url: str = 'http://10.27.127.33:8085/v1/tts',
+        url: str = 'XXX/v1/tts',
         api_key: str = 'YOUR_API_KEY',  # 固定 API Key
         output_format: str = "wav",
         chunk_length: int = 200,
@@ -71,8 +71,8 @@ class FishSpeechTTS(BaseTTS):
         if references is None:
             references = []
 
-        reference_audio = ["/home/sunzhu/Real-time-hyperpersonification/GPTo_V4/server/modules/models/TTS/demo2.mp3"]
-        reference_text = ["从前，在一个宁静的小村庄里，有一个年轻的女孩名叫艾莉。她对星星充满了好奇，总是喜欢在夜晚仰望星空。有一天晚上，艾莉发现了一颗与众不同的星星，它闪烁着奇异的光芒，仿佛在向她传递什么信息。艾莉心中充满了好奇，决定一探究竟。她带上了望远镜，徒步穿越森林来到了一座小山顶。这里是观星的绝佳地点。夜幕降临，艾莉用望远镜仔细观察那颗特别的星星。"]
+        reference_audio = ["/XXXX/demo2.mp3"]
+        reference_text = ["XXXX。"]
         references = [
             ServeReferenceAudio(audio=ref_audio, text=ref_text)
             for ref_text, ref_audio in zip(reference_text, reference_audio)
