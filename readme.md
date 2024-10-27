@@ -28,7 +28,7 @@ FishSpeech地址：https://github.com/fishaudio/fish-speech
 
 - tts_model模块：该模块主要将分割后的文本发送给TTS进行处理，TTS处理后的结果直接放在send_audio_queue队列。
 
-- 
+- data_transmission模块：该模块主要将send_text_queue和send_audio_queue队列发送给前端。
 
 
 
