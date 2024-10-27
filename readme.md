@@ -30,4 +30,8 @@ FishSpeech地址：https://github.com/fishaudio/fish-speech
 
 - data_transmission模块：该模块主要将send_text_queue和send_audio_queue队列发送给前端。
 
+### 注意：
+
+各个模块并不是顺序进行的，模块是异步的
+岁色大辞典
 
