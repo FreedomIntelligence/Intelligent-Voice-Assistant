@@ -37,13 +37,13 @@ LLM：直接更改deepspeek_llm下的url以及model名称，如果不是OpenAI�
 TTS: 更改fish_speech_tts下的URL外，还需要更改refereence_audio和reference_text(这里的语音需要满足音频的评率是44100，如果是48000或者其他，只需要在Fish运行api脚本文件中的，sample_rate更改你想要的即可)。同理，想要添加其他的TTS，只需满足base_tts下的要求即可。
 ```  
 
-#### 4.2 更改模块间参数
-```bash
-audio_detection模块：uffer_duration可以调整检测语音停顿时间，建议0.5（500毫秒）threshold调整阈值以控制敏感度，save_dir保存音频文件
+#### 4.2 更改模块间参数  
 
-tts_module模块： file_namefish合成语音
+- `-- audio_detection模块：uffer_duration：可以调整检测语音停顿时间，建议0.5（500毫秒）
+threshold：调整阈值以控制敏感度，save_dir：保存音频文件
 
-```
+tts_module模块： file_name：fish合成语音路径
+
 ### 4. 指定GPU运行（可选）
 
 ```bash
