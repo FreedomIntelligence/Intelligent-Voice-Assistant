@@ -69,7 +69,8 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 uvicorn server:app --host 1XX.XXX.XXX.XXX --port 8000 --ssl-keyfile=XXX/key.pem --ssl-certfile=XXX/cert.pem
 ```
 
-#### 如果出现找不到模块的错误，请在运行项目前，执行以下代码：只需将server文件下的modules导入即可。
+#### 如果出现找不到模块的错误，请在运行项目前，执行以下代码：只需将server文件下的modules导入即可。  
+
 ```bash
 export PYTHONPATH='XXX/server/modules  
 ```
