@@ -41,9 +41,9 @@ TTS: 更改fish_speech_tts下的URL外，还需要更改refereence_audio和refer
 
 - audio_detection模块：uffer_duration：可以调整检测语音停顿时间，建议0.5（500毫秒）
 
-threshold：调整阈值以控制敏感度，  
+   threshold：调整阈值以控制敏感度，  
 
-save_dir：保存音频文件
+   save_dir：保存音频文件
 
 - tts_module模块： file_name：fish合成语音路径
 
