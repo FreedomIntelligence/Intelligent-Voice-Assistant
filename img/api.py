@@ -349,12 +349,12 @@ def parse_args():
     parser.add_argument(
         "--llama-checkpoint-path",
         type=str,
-        default="/home/sunzhu/Real-time-hyperpersonification/fish_audio_v2/checkpoints/fish-speech-1.4",
+        default="XXXX/fish_audio_v2/checkpoints/fish-speech-1.4",  ## 模型加载地址
     )
     parser.add_argument(
         "--decoder-checkpoint-path",
         type=str,
-        default="/home/sunzhu/Real-time-hyperpersonification/fish_audio_v2/checkpoints/fish-speech-1.4/firefly-gan-vq-fsq-8x1024-21hz-generator.pth",
+        default="/XXX/fish_audio_v2/checkpoints/fish-speech-1.4/firefly-gan-vq-fsq-8x1024-21hz-generator.pth",  ## 加载模型文件地址
     )
     parser.add_argument("--decoder-config-name", type=str, default="firefly_gan_vq")
     parser.add_argument("--device", type=str, default="cuda")
@@ -439,7 +439,7 @@ if __name__ == "__main__":
         )
     )
 
-    url = '10.27.127.33:8085'
+    url = 'XXX.XXX.XXX:8085'   ## 设定启动API的地址和端口
     logger.info(f"Warming up done, starting server at http://{url}")
     host, port = url.split(":")
     uvicorn.run(app, host=host, port=int(port), workers=args.workers, log_level="info")
